@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const deleteTodo = async (id) => {
-
-  const url = `http://localhost:5000/todos/${id}`;
+  // const url = `http://localhost:5000/todos/${id}`;
+  const url = `https://todolistapp-c04k.onrender.com/todos/${id}`;
   try {
     const response = await axios.delete(url);
     console.log("Todo updated:", response.data);
