@@ -14,12 +14,13 @@ const ListOf = () => {
   const [editIndex, setEditIndex] = useState(-1);
   const [editedName, setEditedName] = useState("");
 
+
   const isWidthBelow900 = useMediaQuery("(min-width:900px)");
 
-  console.log(fetchData._id);
+  // console.log(fetchData._id);
 
   const handleEdit = (index) => {
-    console.log(`Editing todo at index ${index}`);
+    // console.log(`Editing todo at index ${index}`);
     const editedTodo = fetchData[index];
     setEditIndex(index);
     setEditedName(editedTodo.name);
@@ -31,7 +32,7 @@ const ListOf = () => {
 
   const handleSave = (index,UpdateId) => {
     console.log("Saving changes");
-    console.log(index);
+    // console.log(index);
     if (editIndex !== -1) {
       const updatedTodo = { ...fetchData[editIndex], name: editedName };
       updateTodoApi(UpdateId, updatedTodo);
@@ -49,10 +50,12 @@ const ListOf = () => {
 
       if (response) {
         setfetchdata(response);
+       
+       
       }
     };
     fetchdata();
-  }, []);
+  }, [fetchData]);
 
   // Rest of the code...
 

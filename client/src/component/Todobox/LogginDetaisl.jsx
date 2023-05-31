@@ -55,12 +55,15 @@ const LogginDetaisl = ({ open, setopen }) => {
     e.preventDefault();
     signUpdata(signData);
     setsignData({ ...signData, name: e.target.value });
+    // setsignData("")
+  
   };
 
   const handleSubmit2 = async (e) => {
     e.preventDefault();
     const statsR = await signIn(signInData);
     setsignInData({ ...signInData, name: e.target.value });
+    // setsignInData("")
 
     if (statsR) {
       // Successful login
@@ -82,7 +85,7 @@ const LogginDetaisl = ({ open, setopen }) => {
     if (isSuccess) {
       const timer = setTimeout(() => {
         handelClose();
-      }, 1000);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [isSuccess]);
