@@ -1,0 +1,13 @@
+.NavbarMain {
+    height: 55px;
+    background: rgb(115, 212, 250);
+    flex-direction: row !important;
+    justify-content: space-between ;
+    align-items: center;
+    width: 50%;
+    margin-top: 50px;
+    padding: 0px 30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+

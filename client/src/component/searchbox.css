@@ -1,0 +1,5 @@
+@media only screen and (max-width: 900px) {
+    .searchBox{
+        width: 75% !important;
+    }
+}
